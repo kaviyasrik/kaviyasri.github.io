@@ -5,8 +5,8 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #565a5f;
-  background:rgb(43, 40, 40);
+  color: #f1e9e9;
+  background:rgba(5, 5, 5, 0.829);
 
 }
 
@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #0cdee6;
+  border: 6px solid #0b9ba0;
   border-top-color: rgb(255, 255, 255);
   border-bottom-color: rgb(255, 255, 255);
   border-radius: 50%;
@@ -147,10 +147,8 @@ h1, h2, h3, h4, h5, h6 {
 * Desktop Navigation 
 */
 .nav-menu {
-  padding: 0;
-  display: block;
-  
-  
+  padding: 10px 18px;
+  display: block;  
 }
 .nav-menu * {
   margin: 0;
@@ -167,8 +165,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   color: #181d22;
-  padding: 10px 18px;
-  margin-bottom: 8px;
+  padding: 20px 18px;
+  margin-bottom: 20px;
   transition: 0.2s;
   font-size: 15px;
   border-radius: 50px;
@@ -216,17 +214,17 @@ h1, h2, h3, h4, h5, h6 {
 */
 .mobile-nav-toggle {
   position: fixed;
-  right: 0px;
-  top: 0px;
+  right: 20px;
+  top: 10px;
   z-index: 9998;
   border: 0;
-  background: none;
-  font-size: 28px;
+  background: rgba(73, 126, 172, 0.534);
+  font-size: 35px;
   transition: all 0.4s;
   outline: none !important;
-  line-height: 0;
+  line-height: 2px;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 100px;
   padding: 5px;
 }
 .mobile-nav-toggle i {
@@ -315,9 +313,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .social-links a:hover {
   color: #0563bb;
 }
-/* .dp{
-  right: 500px ;
-} */
+
 @media (max-width: 992px) {
   #hero {
     text-align: left;
@@ -329,7 +325,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 36px;
     
 
-  }
+}
   #hero p {
     margin-top: 20px;
     font-size: 30px;
@@ -553,33 +549,33 @@ section {
   left: 5%
 }
 .ui-labels {
-  left: 50px;
+  left: 20px;
   bottom: -26px;
   text-shadow: 0 0 4px grey;
   color:rgb(252, 239, 239);
   position: absolute;
   width: 100%;
-  font-size: 25px;
+  font-size: 15px;
   
 }
 .ui-labels1 {
-  left: 27px;
-  bottom: -26px;
-  text-shadow: 0 0 4px grey;
-  color:rgb(252, 239, 239);
-  position: absolute;
-  width: 100%;
-  font-size: 14px;
-  
-}
-.ui-labels2 {
-  left: 45px;
+  left: 47px;
   bottom: -26px;
   text-shadow: 0 0 4px grey;
   color:rgb(252, 239, 239);
   position: absolute;
   width: 100%;
   font-size: 20px;
+  
+}
+.ui-labels2 {
+  left: 25px;
+  bottom: -26px;
+  text-shadow: 0 0 4px grey;
+  color:rgb(252, 239, 239);
+  position: absolute;
+  width: 100%;
+  font-size: 14px;
   
 }
 .ui-labels3{
@@ -597,17 +593,23 @@ section {
 }
 
 .progress.blue .progress-left .progress-bar {
-  animation: loading-2 1.5s linear forwards 1.8s
+  animation: loading-1 1.5s linear forwards 1.8s
 }
 
 .progress.yellow .progress-bar {
-  border-color: #fdba04
+  border-color: #fdf904
 }
 
 .progress.yellow .progress-left .progress-bar {
   animation: loading-2 1.5s linear forwards 1.8s
 }
+.progress.orange .progress-bar {
+  border-color: #fda604
+}
 
+.progress.orange .progress-left .progress-bar {
+  animation: loading-3 1.5s linear forwards 1.8s
+}
 .progress.green .progress-bar {
   border-color: #0cfd04
 }
@@ -631,10 +633,10 @@ section {
   100% {
       -webkit-transform: rotate(180deg);
       transform: rotate(180deg)
-  }
+  } 
 }
 
-@keyframes loading-2 {
+ @keyframes loading-2 {
   0% {
       -webkit-transform: rotate(0deg);
       transform: rotate(0deg)
@@ -642,21 +644,11 @@ section {
 
   100% {
       -webkit-transform: rotate(144deg);
-      transform: rotate(140deg)
+      transform: rotate(130deg)
   }
 }
 
-@keyframes loading-3 {
-  0% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg)
-  }
 
-  100% {
-      -webkit-transform: rotate(170deg);
-      transform: rotate(170deg)
-  }
-}
 
 @keyframes loading-4 {
   0% {
@@ -679,7 +671,7 @@ section {
   100% {
       -webkit-transform: rotate(150deg);
       transform: rotate(150deg)
-  }
+  } 
 }
 
 /*--------------------------------------------------------------
@@ -746,8 +738,14 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact{
+  background-size: auto;
+ margin-bottom: 200px;
+
+}
 .contact .info {
   width: 100%;
+  
   /* background: #fff; */
 }
 .contact .info i {
@@ -783,89 +781,6 @@ section {
   background: #0563bb;
   color: #fff;
 }
-.contact .php-email-form {
-  width: 100%;
-  background: #fff;
-}
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-.contact .php-email-form .error-message br + br {
-  margin-top: 25px;
-}
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-.contact .php-email-form input, .contact .php-email-form textarea {
-  border-radius: 4px;
-  box-shadow: none;
-  font-size: 14px;
-}
-.contact .php-email-form input {
-  height: 44px;
-}
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-.contact .php-email-form button[type=submit] {
-  background: #0563bb;
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-.contact .php-email-form button[type=submit]:hover {
-  background: #0678e3;
-}
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
